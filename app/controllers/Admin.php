@@ -197,7 +197,7 @@ class Admin extends Controller
       // Make sure errors are empty
       if (empty($data['doctor_image_err']) && empty($data['email_err']) && empty($data['doctor_name_err']) && empty($data['description_1_err']) && empty($data['description_2_err'])  && empty($data['contact_number_err'])) {
         $fileNewName = uniqid('', true) . "." . $fileActualExt;
-        $fileDestination =   'images/' . $fileNewName;
+        $fileDestination = 'images/' . $fileNewName;
         move_uploaded_file($fileTempName, $fileDestination);
         $data['image_path'] = $fileNewName;
 
