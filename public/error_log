@@ -1,0 +1,1 @@
+[20-Nov-2022 11:42:46 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/themothercare/public_html/app/controllers/Users.php on line 327
