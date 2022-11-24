@@ -330,6 +330,14 @@ class Users extends Controller
   public function logout()
   {
     if (($_SESSION['user_role'] == 'admin')) {
+
+      unset($_SESSION['user_id']);
+      unset($_SESSION['user_email ']);
+      unset($_SESSION['user_name']);
+      unset($_SESSION['user_role']);
+      unset($_SESSION['user_contact_number']);
+
+      session_destroy();
       redirect('admin');
     } else {
 
@@ -341,7 +349,7 @@ class Users extends Controller
       unset($_SESSION['user_name']);
       unset($_SESSION['user_role']);
       unset($_SESSION['user_contact_number']);
-     
+
       session_destroy();
 
       redirect('users/login');
